@@ -11,7 +11,7 @@ export default function HomePage() {
         <p className="text-xl md:text-2xl text-zinc-700 mb-6">
           Software Engineer & Technical Writer
         </p>
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <Link href="/blog" className="btn">
             Read My Blog
           </Link>
