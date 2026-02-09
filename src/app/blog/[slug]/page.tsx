@@ -1,3 +1,4 @@
+import React from "react"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { PortableText } from "@portabletext/react"
@@ -97,7 +98,10 @@ export default async function BlogPostPage({
 
       {/* Body */}
       <div className="prose-container">
-        <PortableText value={post.body} components={portableTextComponents} />
+        <PortableText
+          value={post.body as React.ComponentProps<typeof PortableText>["value"]}
+          components={portableTextComponents}
+        />
       </div>
 
       {/* Footer */}
